@@ -108,28 +108,32 @@ export default function App() {
           ? "convert video is not in progress"
           : `video converting... ${progress * 100} %`}
       </div>
-      {file && (
-        <>
-          <a href={srcBefore}>after {srcBefore}</a>
-          <video
-            src={srcBefore}
-            controls
-            autoPlay
-            style={{ width: "200px", objectFit: "cover" }}
-          />
-        </>
-      )}
-      {src && (
-        <>
-          <a href={src}>after {src}</a>
-          <video
-            src={src}
-            controls
-            autoPlay
-            style={{ width: "200px", objectFit: "cover" }}
-          />
-        </>
-      )}
+      <div>
+        {file && (
+          <>
+            <a href={srcBefore}>after {srcBefore}</a>
+            <video
+              src={srcBefore}
+              controls
+              autoPlay
+              style={{ width: "200px", objectFit: "cover" }}
+            />
+          </>
+        )}
+      </div>
+      <div>
+        {src && (
+          <>
+            <a href={src}>after {src}</a>
+            <video
+              src={src}
+              controls
+              autoPlay
+              style={{ width: "200px", objectFit: "cover" }}
+            />
+          </>
+        )}
+      </div>
     </div>
   );
 }
